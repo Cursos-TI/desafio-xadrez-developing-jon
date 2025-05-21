@@ -7,23 +7,22 @@
 int main() {
     // Nível Novato - Movimentação das Peças
     // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
-int b = 0, t= 0, r= 0;
+int b = 1, t= 1, r= 1;
     // Implementação de Movimentação do Bispo
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
 printf("\nAbaixo está o movimento do Bispo nesta jogada: \n");
 
 do{
-    
     printf("Bispo moveu-se uma casa para cima e direita.\n");
     b++;
-} while (b < 5);
+} while (b <= 5);
 
 // Implementação de Movimentação da Torre
 // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
 
 printf("\nAbaixo está o movimento da Torre nesta jogada: \n");
 
-for (t = 0; t < 5; t++){
+for (t = 1; t <= 5; t++){
     printf("Torre moveu-se uma casa para direita.\n");
 }
 
@@ -31,16 +30,44 @@ for (t = 0; t < 5; t++){
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
 
 printf("\nAbaixo estáo movimento da Rainha nesta jogada: \n");
-
-while (r < 8){
+while (r <= 8){
     printf("A Rainha moveu-se uma casa para a esquerda.\n");
     r++;
 }
 
-
     // Nível Aventureiro - Movimentação do Cavalo
     // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
     // Um loop pode representar a movimentação horizontal e outro vertical.
+
+    int escolhaMovC;
+    int c = 1;
+
+printf("\nSua próxima jogada séra com o Cavalo. O mesmo movimenta-se em L. Você deseja: \n");
+printf("1. Cima e esquerda\n");
+printf("2. Cima e direita\n");
+printf("3. Baixo e esquerda\n");
+printf("4. Baixo e direita\n");
+printf("Faça sua jogada: ");
+scanf("%d", &escolhaMovC);
+
+switch (escolhaMovC){
+case 1:
+    printf("\nO cavalo faz o movimento: \n");
+    while (c = 1){
+            for (c = 0; c <2; c++){
+            printf("1 casa para cima\n");
+            } 
+        printf("1 casa para direita\n");  
+        c--;
+    }        
+break;
+    
+default: 
+    printf("Opção de movimentação inválida\n");
+break;     
+    }
+
+
 
     // Nível Mestre - Funções Recursivas e Loops Aninhados
     // Sugestão: Substitua as movimentações das peças por funções recursivas.
