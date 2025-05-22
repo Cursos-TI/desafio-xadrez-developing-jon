@@ -40,7 +40,7 @@ while (r <= 8){
     // Um loop pode representar a movimentação horizontal e outro vertical.
 
     int escolhaMovC;
-    int c = 1;
+    int c1 = 1;
 
 printf("\nSua próxima jogada séra com o Cavalo. O mesmo movimenta-se em L. Você deseja: \n");
 printf("1. Cima e esquerda\n");
@@ -52,18 +52,53 @@ scanf("%d", &escolhaMovC);
 
 switch (escolhaMovC){
 case 1:
-    printf("\nO cavalo faz o movimento: \n");
-    while (c = 1){
-            for (c = 0; c <2; c++){
-            printf("1 casa para cima\n");
+    printf("\nO Cavalo movimenta-se:\n");
+    while (c1 < 2){
+            for (int c2 = 1; c2 <= 2; c2++){
+            printf("Uma casa para cima.\n");
             } 
-        printf("1 casa para direita\n");  
-        c--;
+        printf("Uma casa para esquerda.\n");  
+        c1++;
     }        
 break;
+
+case 2: 
+    printf("\nO Cavalo movimenta-se: \n");
+    while (c1 < 2){
+        for (int c2 = 1; c2 <= 2; c2++){
+            printf("Uma casa para cima.\n");
+        }
+        printf("Uma casa para a direita.\n");
+        c1++;
+    }
+break;
+
+case 3: 
+    printf("\nO Cavalo movimenta-se: \n");
+    while (c1 < 2){
+        for (int c2 = 1; c2 <= 2; c2++){
+            printf("Uma casa para baixo.\n");
+        }
+        
+        printf("Uma casa para a esquerda.\n");
+        c1++;
+    }
+break;
+
+case 4: 
+    printf("\nO Cavalo movimenta-se: \n");
+    while (c1 < 2){
+        for (int c2 = 1; c2 <= 2; c2++){
+            printf("Uma casa para baixo.\n");
+        }
+        
+        printf("Uma casa para a direita.\n");
+        c1++;
+    }
+break;  
     
 default: 
-    printf("Opção de movimentação inválida\n");
+    printf("\nOpção de movimentação inválida\n");
 break;     
     }
 
